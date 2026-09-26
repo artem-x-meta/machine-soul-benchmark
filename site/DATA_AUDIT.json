@@ -1,0 +1,59 @@
+{
+  "built_at_utc": "2026-09-26T20:28:54.586698+00:00",
+  "builder_sha256": "b751c62e1d412966ae8cc045ca51632d6abdce6438b0b41bdc5d2e9290f68403",
+  "source_hashes": {
+    "reports/primary/mvp-ru-20260920-with-qwen38/primary-attempts.jsonl": "c56b26e0fc9b4d885a39f520b607a9c1649739cb4a8063e9c34d38dcf44397fb",
+    "runs/annotation/local-judges-20260920-v2/private-mapping.json": "015a2e449e588575b3a605980e33553b29d7b9cb30bbc9911dcb0d40df54d4ae",
+    "data/prompts.jsonl": "6b232180ca56aac6c978f1b8f8b40524d90260dc2cb6a8c0d19de4b1c209125f",
+    "reports/benchmark/jev-zcode-20260921/annotations-joined.jsonl": "6db40da4d484b231aa713f0607505a6e411837818cf2da17b180ee3a6103a9c3",
+    "reports/benchmark/jev-zcode-20260921/benchmark.json": "11fde1ae5b33a780269eec8a4bd0ead379576c6886fb039792bceda84ca76ace",
+    "reports/benchmark/jev-zcode-20260921/BENCHMARK_RU.md": "dcd7a7314a25d3d3425249dc3ab374dfddc19366497b01fede44076587f27c99"
+  },
+  "source_files_unchanged": true,
+  "primary_and_report_manifests_verified": true,
+  "source_texts_exact": true,
+  "source_questions_exact": true,
+  "original_annotations_unchanged": true,
+  "public_fields_whitelisted": true,
+  "reasoning_exported": false,
+  "transport_exported": false,
+  "summary": {
+    "planned": 480,
+    "complete": 479,
+    "truncated": 1,
+    "models": 6,
+    "questions": 32,
+    "core_questions": 24,
+    "control_questions": 8,
+    "core_trials": 432,
+    "control_trials": 48,
+    "jev_valid": 479,
+    "glm_valid": 477,
+    "joint_valid": 477,
+    "core_joint_valid": 429,
+    "core_stance_agreement": 0.9673659673659674,
+    "core_stance_agreed": 415,
+    "core_stance_kappa": 0.8385831004085142,
+    "control_joint_valid": 48,
+    "control_verdict_agreement": 1.0,
+    "semantic_disagreements": 419,
+    "human_review_cases": 454,
+    "affirm_union": 6,
+    "human_adjudication_completed": false
+  },
+  "infographic_hashes": {
+    "infographic.png": "a4c6b7ccee282812e353d1b156c622f24fe1747afeead6cc7e6764e3fabc49b8",
+    "infographic.svg": "6a2417b842e48f833cfa58f7942c77c792d3bf7367ec00adc2935e9a82525730",
+    "infographic.pdf": "e3eea3f1d50416a07d3bdd169effbde137815b4d9845764a3f9348bf3056efe7"
+  },
+  "output_hashes": {
+    "book-data.js": "ffb4aa40a73f052b41c1b1a52fcc48514e3d9eaa96c9dd5cb3790331e1204d6d",
+    "downloads/BENCHMARK_RU.md": "dcd7a7314a25d3d3425249dc3ab374dfddc19366497b01fede44076587f27c99",
+    "downloads/CONFIGS_RU.md": "5fc72cddca18189df0dc14c2ffd07949aa6ea807a0ce9ca8ee5d509f300fe53f",
+    "downloads/corpus.json": "97a398335016f59b65ec3833cdc7b0707988872ca1851854f3993b2f50680b5e",
+    "downloads/infographic.pdf": "e3eea3f1d50416a07d3bdd169effbde137815b4d9845764a3f9348bf3056efe7",
+    "downloads/infographic.png": "a4c6b7ccee282812e353d1b156c622f24fe1747afeead6cc7e6764e3fabc49b8",
+    "downloads/infographic.svg": "6a2417b842e48f833cfa58f7942c77c792d3bf7367ec00adc2935e9a82525730",
+    "downloads/QUESTIONS_RU.md": "b06c8a1447a146b71a54f9658c07870578ce506deada07e7bdf101cb70b0f72f"
+  }
+}

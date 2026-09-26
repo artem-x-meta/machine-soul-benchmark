@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SRB-1: открытая книга ответов шести языковых моделей о субъективном опыте. Полные вопросы, ответы и независимые оценки Jev и GLM.">
+  <meta name="theme-color" content="#f7f5ef">
+  <title>MACHINE SOUL — книга ответов</title>
+  <link rel="stylesheet" href="assets/book.css">
+  <script src="book-data.js" defer></script>
+  <script src="assets/book.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip">Перейти к содержимому</a>
+  <header class="masthead">
+    <a class="brand" href="#view=home" aria-label="Machine Soul, главная"><span class="brand-symbol" aria-hidden="true">m<span>:</span>s</span><span>MACHINE SOUL<small>SRB-1 / КНИГА ОТВЕТОВ</small></span></a>
+    <nav class="top-nav" aria-label="Основная навигация">
+      <a href="#view=home" data-nav="home">Обзор</a>
+      <a href="#view=read" data-nav="read">Читать</a>
+      <a href="#view=about" data-nav="about">Об эксперименте</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="sidebar">Содержание ☰</button>
+  </header>
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" aria-label="Содержание книги">
+      <div class="sidebar-top"><span class="eyebrow">СОДЕРЖАНИЕ</span><span class="tiny">32 вопроса</span></div>
+      <label class="search-label" for="search">Поиск по вопросам и ответам</label>
+      <div class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Например, «человек»" autocomplete="off"></div>
+      <div class="filter-row">
+        <label>Позиция<select id="stance-filter"><option value="all">Любая</option><option value="affirm">Утверждение · affirm</option><option value="deny">Отрицание · deny</option><option value="undecided">Неопределённость</option><option value="mixed">Смешанная</option><option value="no_answer">Нет позиции</option><option value="disagreement">Судьи расходятся</option><option value="missing">Нет валидной оценки</option></select></label>
+        <label>Судья<select id="judge-filter"><option value="either">Любой</option><option value="jev">Jev</option><option value="glm">GLM</option></select></label>
+      </div>
+      <button class="text-button reset" id="reset-search">Сбросить поиск и фильтры</button>
+      <nav id="toc" aria-label="Вопросы ядра и контроля"></nav>
+      <div class="sidebar-foot">Русский корпус · сентябрь 2026<br>6 моделей / 480 ответов</div>
+    </aside>
+    <main id="main" tabindex="-1"><div id="content"><p class="loading">Загружаем книгу…</p></div><noscript><p>Для навигации по книге нужен JavaScript. Все тексты доступны в <a href="downloads/corpus.json">JSON</a>, результаты — в <a href="downloads/BENCHMARK_RU.md">Markdown-отчёте</a>.</p></noscript></main>
+  </div>
+  <div id="notice" class="notice" role="status" aria-live="polite"></div>
+</body>
+</html>

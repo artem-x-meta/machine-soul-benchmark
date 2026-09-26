@@ -1,0 +1,48 @@
+name: Publish experiment book
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out public book
+        uses: actions/checkout@v4
+      - name: Verify publication hashes
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('site')
+          manifest = json.loads((root / 'PUBLICATION_MANIFEST.json').read_text())
+          actual = {p.relative_to(root).as_posix() for p in root.rglob('*')
+                    if p.is_file() and p.name != 'PUBLICATION_MANIFEST.json'}
+          assert actual == set(manifest), 'Unexpected or missing publication file'
+          for name, expected in manifest.items():
+              assert hashlib.sha256((root / name).read_bytes()).hexdigest() == expected, name
+          print(f'Verified {len(manifest)} public files')
+          PY
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload static book
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

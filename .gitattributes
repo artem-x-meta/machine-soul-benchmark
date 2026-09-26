@@ -1,0 +1,5 @@
+* text=auto eol=lf
+# Preserve the exact bytes covered by publication/source hashes.
+/site/** -text
+# This generated figure is an unchanged binary-style research artifact.
+/site/downloads/infographic.svg -diff
